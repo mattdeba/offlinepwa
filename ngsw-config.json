@@ -10,8 +10,7 @@
           "/index.html",
           "/*.css",
           "/*.js",
-          "/assets/**",
-          "https://cdn.jsdelivr.net/npm/pdfme@4.3.2/dist/pdfme.min.js"
+          "/assets/**"
         ]
       }
     }
