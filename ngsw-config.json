@@ -1,5 +1,4 @@
 {
-  "$schema": "./node_modules/@angular/service-worker/config/schema.json",
   "index": "/index.html",
   "assetGroups": [
     {
@@ -9,20 +8,19 @@
         "files": [
           "/favicon.ico",
           "/index.html",
-          "/manifest.webmanifest",
           "/*.css",
-          "/*.js"
+          "/*.js",
+          "/assets/**",
+          "https://cdn.jsdelivr.net/npm/pdfme@4.3.2/dist/pdfme.min.js"
         ]
       }
     },
     {
-      "name": "assets",
+      "name": "pdfme",
       "installMode": "lazy",
-      "updateMode": "prefetch",
       "resources": {
-        "files": [
-          "/assets/**",
-          "/*.(svg|cur|jpg|jpeg|png|apng|webp|avif|gif|otf|ttf|woff|woff2)"
+        "urls": [
+          "/path/to/pdfme.js"
         ]
       }
     }
