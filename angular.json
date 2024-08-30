@@ -30,8 +30,22 @@
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
             ],
             "scripts": [],
-            "serviceWorker": true,
-            "ngswConfigPath": "ngsw-config.json"
+            "serviceWorker": false,
+            "ngswConfigPath": "ngsw-config.json",
+            "allowedCommonJsDependencies": [
+              "tiny-inflate",
+              "lodash",
+              "fontkit",
+              "unicode-trie",
+              "fast-deep-equal",
+              "color",
+              "node-html-better-parser",
+              "pako",
+              "buffer",
+              "fast-xml-parser",
+              "clone",
+              "dfa"
+            ]
           },
           "configurations": {
             "production": {

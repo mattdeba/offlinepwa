@@ -4,23 +4,14 @@
     {
       "name": "app",
       "installMode": "prefetch",
+      "updateMode": "prefetch",
       "resources": {
         "files": [
           "/favicon.ico",
           "/index.html",
           "/*.css",
           "/*.js",
-          "/assets/**",
-          "/manifest.webmanifest"
-        ]
-      }
-    },
-    {
-      "name": "manifest",
-      "installMode": "lazy",
-      "resources": {
-        "files": [
-          "/manifest.webmanifest"
+          "/assets/**"
         ]
       }
     }
