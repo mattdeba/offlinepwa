@@ -10,7 +10,17 @@
           "/index.html",
           "/*.css",
           "/*.js",
-          "/assets/**"
+          "/assets/**",
+          "/manifest.webmanifest"
+        ]
+      }
+    },
+    {
+      "name": "manifest",
+      "installMode": "lazy",
+      "resources": {
+        "files": [
+          "/manifest.webmanifest"
         ]
       }
     }
