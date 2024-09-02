@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-  native_scheduler-rct:
-    image: docker-repository.mycuma.fr/fncuma-api/native_scheduler:latest
-    container_name: native_scheduler-rct
+  tfour-rct:
+    image: docker-repository.mycuma.fr/fncuma-api/tfour:latest
+    container_name: tfour-rct
     environment:
       - NODE_ENV=preprod
     networks:
