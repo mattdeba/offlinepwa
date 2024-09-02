@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  native_scheduler-rct:
+    image: docker-repository.mycuma.fr/fncuma-api/native_scheduler:latest
+    container_name: native_scheduler-rct
+    environment:
+      - NODE_ENV=preprod
+    networks:
+      - frontend-rct
+    ports:
+      - '8089:8080'
+    restart: unless-stopped
+
+networks:
+  frontend-rct:
+    external: true

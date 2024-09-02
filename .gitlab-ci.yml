@@ -1,0 +1,27 @@
+stages:
+  - build_preprod
+  - deploy_preprod
+
+build_preprod:
+  stage: build_preprod
+  image: docker
+  script:
+    - docker login -u ${DOCKER_REGISTRY_USER_LOGIN} -p ${DOCKER_REGISTRY_USER_PASSWORD} docker-repository.mycuma.fr
+    - docker build -t docker-repository.mycuma.fr/fncuma-api/tfour:latest .
+    - docker push docker-repository.mycuma.fr/fncuma-api/tfour:latest
+  when: manual
+  allow_failure: true
+
+deploy_preprod:
+  stage: deploy_preprod
+  image: docker/compose
+  environment:
+    name: preprod
+  script:
+    - docker login -u ${DOCKER_REGISTRY_USER_LOGIN} -p ${DOCKER_REGISTRY_USER_PASSWORD} docker-repository.mycuma.fr
+    - docker context create preprod --description "Environnement preprod FnCuma" --docker host=tcp://${INTEGRATION_HOST}:2375
+    - docker context use preprod
+    - docker-compose -f docker/compose/poc/rct/docker-compose.preprod.yml --context preprod -p "poc" pull
+    - docker-compose -f docker/compose/poc/rct/docker-compose.preprod.yml --context preprod -p "poc" up --force-recreate --build -d
+  when: manual
+  allow_failure: true
