@@ -1,1 +1,6 @@
-<p>formulaire works!</p>
+<mat-chip-listbox>
+    <mat-chip-option [ngClass]="{'selected-chip': choices.includes(choice)}" *ngFor="let choice of nextChoices" (click)="onChoiceClick(choice)">{{choice}}</mat-chip-option>
+</mat-chip-listbox>
+<button mat-raised-button (click)="onNextClick()" *ngIf="nextChoices.length != 0">Suivant</button>
+<button mat-raised-button color="primary" (click)="restart()" *ngIf="nextChoices.length == 0 && choices.length!=0">Revenir</button>
+<button mat-raised-button (click)="generatePdf()" *ngIf="nextChoices.length == 0 && choices.length!=0">Télécharger</button>

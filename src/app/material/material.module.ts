@@ -22,6 +22,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatChipsModule } from '@angular/material/chips';
 
 const features: any[] = [
   MatFormFieldModule,
@@ -50,6 +51,7 @@ const features: any[] = [
   MatAutocompleteModule,
   MatTooltipModule,
   MatStepperModule,
+  MatChipsModule,
 ];
 
 @NgModule({

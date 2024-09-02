@@ -1,0 +1,312 @@
+[
+  {
+    "Choix 1": "Temps plein",
+    "Choix 2": "CDI",
+    "Choix 3": "Alternance de haute et basse activité",
+    "Choix 4": "Cadre",
+    "Choix 5": "Peut suivre l'horaire collectif",
+    "Choix 6": "35h Annualisé",
+    "Choix 7": null,
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps plein",
+    "Choix 2": "CDI",
+    "Choix 3": "Alternance de haute et basse activité",
+    "Choix 4": "Cadre",
+    "Choix 5": "Peut suivre l'horaire collectif",
+    "Choix 6": "35h JRTT",
+    "Choix 7": null,
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps plein",
+    "Choix 2": "CDI",
+    "Choix 3": "Alternance de haute et basse activité",
+    "Choix 4": "Cadre",
+    "Choix 5": "Peut suivre l'horaire collectif",
+    "Choix 6": "Forfait annuel en heures",
+    "Choix 7": null,
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps plein",
+    "Choix 2": "CDI",
+    "Choix 3": "Alternance de haute et basse activité",
+    "Choix 4": "Cadre",
+    "Choix 5": "Ne peut pas suivre l'horaire collectif",
+    "Choix 6": "gere son emploi du temps",
+    "Choix 7": "35h annualisé",
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps plein",
+    "Choix 2": "CDI",
+    "Choix 3": "Alternance de haute et basse activité",
+    "Choix 4": "Cadre",
+    "Choix 5": "Ne peut pas suivre l'horaire collectif",
+    "Choix 6": "gere son emploi du temps",
+    "Choix 7": "35h JRTT",
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps plein",
+    "Choix 2": "CDI",
+    "Choix 3": "Alternance de haute et basse activité",
+    "Choix 4": "Cadre",
+    "Choix 5": "Ne peut pas suivre l'horaire collectif",
+    "Choix 6": "gere son emploi du temps",
+    "Choix 7": "Forfait annuel en heures",
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps plein",
+    "Choix 2": "CDI",
+    "Choix 3": "Alternance de haute et basse activité",
+    "Choix 4": "Cadre",
+    "Choix 5": "Ne peut pas suivre l'horaire collectif",
+    "Choix 6": "ne gère pas son emploi du temps",
+    "Choix 7": "35h annualisé",
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps plein",
+    "Choix 2": "CDI",
+    "Choix 3": "Alternance de haute et basse activité",
+    "Choix 4": "Cadre",
+    "Choix 5": "Ne peut pas suivre l'horaire collectif",
+    "Choix 6": "ne gère pas son emploi du temps",
+    "Choix 7": "35h JRTT",
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps plein",
+    "Choix 2": "CDI",
+    "Choix 3": "Alternance de haute et basse activité",
+    "Choix 4": "Non cadre",
+    "Choix 5": "gere son emploi du temps",
+    "Choix 6": "35H annualisé",
+    "Choix 7": null,
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps plein",
+    "Choix 2": "CDI",
+    "Choix 3": "Alternance de haute et basse activité",
+    "Choix 4": "Non cadre",
+    "Choix 5": "gere son emploi du temps",
+    "Choix 6": "35h JRTT",
+    "Choix 7": null,
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps plein",
+    "Choix 2": "CDI",
+    "Choix 3": "Alternance de haute et basse activité",
+    "Choix 4": "Non cadre",
+    "Choix 5": "gere son emploi du temps",
+    "Choix 6": "Forfait annuel en heures",
+    "Choix 7": null,
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps plein",
+    "Choix 2": "CDI",
+    "Choix 3": "Alternance de haute et basse activité",
+    "Choix 4": "Non cadre",
+    "Choix 5": "ne gère pas son emploi du temps",
+    "Choix 6": "35h annualisé",
+    "Choix 7": null,
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps plein",
+    "Choix 2": "CDI",
+    "Choix 3": "Alternance de haute et basse activité",
+    "Choix 4": "Non cadre",
+    "Choix 5": "ne gère pas son emploi du temps",
+    "Choix 6": "35h JRTT",
+    "Choix 7": null,
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps plein",
+    "Choix 2": "CDI",
+    "Choix 3": "Sans alternance",
+    "Choix 4": "Cadre",
+    "Choix 5": "39h Hebdo",
+    "Choix 6": null,
+    "Choix 7": null,
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps plein",
+    "Choix 2": "CDI",
+    "Choix 3": "Sans alternance",
+    "Choix 4": "Cadre",
+    "Choix 5": "35h JRTT",
+    "Choix 6": null,
+    "Choix 7": null,
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps plein",
+    "Choix 2": "CDI",
+    "Choix 3": "Sans alternance",
+    "Choix 4": "Cadre",
+    "Choix 5": "35h Hebdo",
+    "Choix 6": null,
+    "Choix 7": null,
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps plein",
+    "Choix 2": "CDI",
+    "Choix 3": "Sans alternance",
+    "Choix 4": "Non cadre",
+    "Choix 5": "39h Hebdo",
+    "Choix 6": null,
+    "Choix 7": null,
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps plein",
+    "Choix 2": "CDI",
+    "Choix 3": "Sans alternance",
+    "Choix 4": "Non cadre",
+    "Choix 5": "35h JRTT",
+    "Choix 6": null,
+    "Choix 7": null,
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps plein",
+    "Choix 2": "CDI",
+    "Choix 3": "Sans alternance",
+    "Choix 4": "Non cadre",
+    "Choix 5": "35h Hebdo",
+    "Choix 6": null,
+    "Choix 7": null,
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps plein",
+    "Choix 2": "CDD",
+    "Choix 3": "avec alternance",
+    "Choix 4": "35H annualisé",
+    "Choix 5": null,
+    "Choix 6": null,
+    "Choix 7": null,
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps plein",
+    "Choix 2": "CDD",
+    "Choix 3": "avec alternance",
+    "Choix 4": "35h JRTT",
+    "Choix 5": null,
+    "Choix 6": null,
+    "Choix 7": null,
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps plein",
+    "Choix 2": "CDD",
+    "Choix 3": "avec alternance",
+    "Choix 4": "Forfait annuel en heures",
+    "Choix 5": null,
+    "Choix 6": null,
+    "Choix 7": null,
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps plein",
+    "Choix 2": "CDD",
+    "Choix 3": "sans alternance",
+    "Choix 4": "39h hebdo",
+    "Choix 5": null,
+    "Choix 6": null,
+    "Choix 7": null,
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps plein",
+    "Choix 2": "CDD",
+    "Choix 3": "sans alternance",
+    "Choix 4": "35h JRTT",
+    "Choix 5": null,
+    "Choix 6": null,
+    "Choix 7": null,
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps partiel",
+    "Choix 2": "CDI",
+    "Choix 3": "avec alternance",
+    "Choix 4": "temps partiel annualisé",
+    "Choix 5": null,
+    "Choix 6": null,
+    "Choix 7": null,
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps partiel",
+    "Choix 2": "CDI",
+    "Choix 3": "avec alternance",
+    "Choix 4": "temps partiel modulé",
+    "Choix 5": null,
+    "Choix 6": null,
+    "Choix 7": null,
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps partiel",
+    "Choix 2": "CDI",
+    "Choix 3": "sans alternance",
+    "Choix 4": "temps partiel hebdo/mensuel",
+    "Choix 5": null,
+    "Choix 6": null,
+    "Choix 7": null,
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps partiel",
+    "Choix 2": "CDD",
+    "Choix 3": "avec alternance",
+    "Choix 4": "temps partiel annualisé",
+    "Choix 5": null,
+    "Choix 6": null,
+    "Choix 7": null,
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps partiel",
+    "Choix 2": "CDD",
+    "Choix 3": "avec alternance",
+    "Choix 4": "temps partiel modulé",
+    "Choix 5": null,
+    "Choix 6": null,
+    "Choix 7": null,
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Temps partiel",
+    "Choix 2": "CDD",
+    "Choix 3": "sans alternance",
+    "Choix 4": "temps partiel hebdo/mensuel",
+    "Choix 5": null,
+    "Choix 6": null,
+    "Choix 7": null,
+    "Contrat associé": null
+  },
+  {
+    "Choix 1": "Intermittence",
+    "Choix 2": "Contrat de travail intermittent",
+    "Choix 3": null,
+    "Choix 4": null,
+    "Choix 5": null,
+    "Choix 6": null,
+    "Choix 7": null,
+    "Contrat associé": null
+  }
+]
