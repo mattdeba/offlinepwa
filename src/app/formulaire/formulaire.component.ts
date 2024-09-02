@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Model } from '../model/repository.model';
 import { generate } from '@pdfme/generator';
-import template from '../../assets/template_contrat_1.json';
+import template from '../../assets/template_contrat.json';
 
 @Component({
   selector: 'app-formulaire',
@@ -30,9 +30,19 @@ export class FormulaireComponent {
   }
 
   async generatePdf() {
+    const choicesLength = this.choices.length;
     const today = new Date().toLocaleDateString();
 
-    const inputs = [{pdfDate: today}]
+  const inputs = [{
+    pdfDate: today,
+    choice1: choicesLength >= 1 ? this.choices[0] : null,
+    choice2: choicesLength >= 2 ? this.choices[1] : null,
+    choice3: choicesLength >= 3 ? this.choices[2] : null,
+    choice4: choicesLength >= 4 ? this.choices[3] : null,
+    choice5: choicesLength >= 5 ? this.choices[4] : null,
+    choice6: choicesLength >= 6 ? this.choices[5] : null,
+    choice7: choicesLength >= 7 ? this.choices[6] : null,
+  }]
 
     generate({ template, inputs }).then((pdf) => {
       const blob = new Blob([pdf.buffer], { type: 'application/pdf' });
