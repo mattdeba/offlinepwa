@@ -4,7 +4,7 @@
 
     <mat-chip-listbox>
             <div class="chip-container">
-                <mat-chip-option [ngClass]="{'selected-chip': choices.includes(choice)}" *ngFor="let choice of nextChoices" (click)="onChoiceClick(choice)"><span class="choice">{{choice}}</span></mat-chip-option>
+                <mat-chip-option *ngFor="let choice of nextChoices" (click)="onChoiceClick(choice)"><span class="choice">{{choice}}</span></mat-chip-option>
             </div>
     </mat-chip-listbox>
 

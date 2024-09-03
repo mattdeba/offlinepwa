@@ -9,6 +9,7 @@ import template from '../../assets/template_contrat.json';
   styleUrls: ['./formulaire.component.css']
 })
 export class FormulaireComponent {
+  selectedChoice: string = "";
   choices: string[] = [];
   nextChoices: string[] = this.model.getNextChoices([]);
 
@@ -22,10 +23,11 @@ export class FormulaireComponent {
   }
 
   onChoiceClick(choice: any) {
-    this.choices.push(choice);
+    this.selectedChoice = choice;
   }
 
   onNextClick() {
+    this.choices.push(this.selectedChoice);
     this.nextChoices = this.model.getNextChoices(this.choices);
   }
 
