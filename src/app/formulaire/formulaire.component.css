@@ -1,0 +1,12 @@
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}

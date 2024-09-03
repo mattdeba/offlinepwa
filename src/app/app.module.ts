@@ -6,11 +6,13 @@ import { MaterialFeatures } from './material/material.module';
 import { FormulaireComponent } from './formulaire/formulaire.component';
 import { AppRoutingModule } from './app-routing.module';
 import { Model } from './model/repository.model';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormulaireComponent
+    FormulaireComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
