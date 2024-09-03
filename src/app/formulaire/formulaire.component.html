@@ -1,12 +1,23 @@
 <div class="flex-container">
     <h1>Choix du contrat</h1>
     <p *ngIf="nextChoices.length != 0">Les modalités d'organisation de la durée de travail sont:</p>
+
     <mat-chip-listbox>
-        <mat-chip-option [ngClass]="{'selected-chip': choices.includes(choice)}" *ngFor="let choice of nextChoices" (click)="onChoiceClick(choice)"><span class="choice">{{choice}}</span></mat-chip-option>
+            <div class="chip-container">
+                <mat-chip-option [ngClass]="{'selected-chip': choices.includes(choice)}" *ngFor="let choice of nextChoices" (click)="onChoiceClick(choice)"><span class="choice">{{choice}}</span></mat-chip-option>
+            </div>
     </mat-chip-listbox>
+
+    <ng-container *ngIf="nextChoices.length == 0 && choices.length!=0">
+        <p>Les modalités du contrat selectionnées sont les suivants:</p>
+        <ul>
+            <li *ngFor="let choice of choices">{{choice}}</li>
+        </ul>
+    </ng-container>
+
     <div class="button-container">
-        <button mat-raised-button (click)="onNextClick()" *ngIf="nextChoices.length != 0">Suivant</button>
-        <button mat-raised-button color="primary" (click)="restart()" *ngIf="nextChoices.length == 0 && choices.length!=0">Reset</button>
-        <button mat-raised-button (click)="generatePdf()" *ngIf="nextChoices.length == 0 && choices.length!=0">Télécharger le contrat</button>
+        <button mat-raised-button color="primary" (click)="restart()"><i class="fa-solid fa-backward-fast"></i> Revenir au début</button>
+        <button mat-raised-button (click)="onNextClick()" *ngIf="nextChoices.length != 0">Suivant <i class="fa-solid fa-forward-step"></i></button>
+        <button mat-raised-button color="accent" (click)="generatePdf()" *ngIf="nextChoices.length == 0 && choices.length!=0"><i class="fa-solid fa-download"></i> Télécharger le contrat</button>
     </div>
 </div>

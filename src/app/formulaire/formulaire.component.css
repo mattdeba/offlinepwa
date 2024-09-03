@@ -2,11 +2,28 @@
     display: flex;
     flex-direction: column;
     margin: auto;
-    width: 50%;
+    width: 80vw;
 }
 
 .button-container {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: left;
+    width: 100%;
     margin-top: 20px;
+}
+
+.chip-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+mat-chip-option {
+}
+
+button {
+    margin: 0 10px 0 10px;
 }
