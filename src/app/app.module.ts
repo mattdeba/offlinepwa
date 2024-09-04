@@ -12,7 +12,7 @@ import { OktaAuthModule } from '@okta/okta-angular';
 const oktaAuth = new OktaAuth({
   issuer: 'https://cuma.okta.com/oauth2/aus38e911jvrUbFhn4x7',
   clientId: '0oam37b31i1MlMnzu4x7',
-  redirectUri: 'http://localhost:4200/login/callback',
+  redirectUri: 'https://tfour.mycuma.fr/login/callback',
 });
 
 @NgModule({
