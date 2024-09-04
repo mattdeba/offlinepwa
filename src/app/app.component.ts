@@ -1,4 +1,6 @@
-import {Component, ElementRef, HostListener} from '@angular/core';
+import { Component, Inject, ElementRef, HostListener } from '@angular/core';
+import { OktaAuthStateService, OKTA_AUTH } from '@okta/okta-angular';
+import { OktaAuth } from '@okta/okta-auth-js';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +12,11 @@ export class AppComponent {
   isExpanded: boolean = false;
 
 
-  constructor(private eRef: ElementRef) { }
+  constructor(public authStateService: OktaAuthStateService, @Inject(OKTA_AUTH) private oktaAuth: OktaAuth, private eRef: ElementRef) { }
+
+  async login() {
+    await this.oktaAuth.signInWithRedirect({ originalUri: '/' });
+  }
 
   ngOnInit() {
     this.checkWindowSize();
