@@ -1,8 +1,4 @@
-import { Component } from '@angular/core';
-import { Template } from '@pdfme/common';
-import { generate } from '@pdfme/generator';
-
-import template from '../assets/template_contrat_1.json';
+import {Component, ElementRef, HostListener} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -10,18 +6,54 @@ import template from '../assets/template_contrat_1.json';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'findYourTime4T';
+  isMobile: boolean = false;
+  isExpanded: boolean = false;
 
-  async generatePdf() {
-    const today = new Date().toLocaleDateString();
 
-    const inputs = [{pdfDate: today}]
+  constructor(private eRef: ElementRef) { }
 
-    generate({ template, inputs }).then((pdf) => {
-      // Browser
-      const blob = new Blob([pdf.buffer], { type: 'application/pdf' });
-      window.open(URL.createObjectURL(blob));
+  ngOnInit() {
+    this.checkWindowSize();
+  }
 
-    });
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.checkWindowSize();
+  }
+
+  @HostListener('document:click', ['$event'])
+  clickout(event: any) {
+    if (!this.eRef.nativeElement.contains(event.target)) {
+      this.isExpanded = false;
+      let sidenav = document.querySelector('.sidenav');
+      if (sidenav) {
+        sidenav.classList.remove('isExpanded');
+      }
+    }
+  }
+
+  private checkWindowSize() {
+    this.isMobile = window.innerWidth < 768;
+  }
+
+  toggleExpand() {
+    this.isExpanded = !this.isExpanded;
+    let sidenav = document.querySelector('.sidenav');
+    if (sidenav === null) {
+      return;
+    }
+    if (this.isExpanded) {
+      sidenav.classList.add('isExpanded');
+    } else {
+      sidenav.classList.remove('isExpanded');
+    }
+  }
+
+  closeSidenav() {
+    this.isExpanded = false;
+    let sidenav = document.querySelector('.sidenav');
+    if (sidenav) {
+      sidenav.classList.remove('isExpanded');
+    }
   }
 }

@@ -31,7 +31,7 @@
               "node_modules/@fortawesome/fontawesome-free/css/all.css"
             ],
             "scripts": [],
-            "serviceWorker": true,
+            "serviceWorker": false,
             "ngswConfigPath": "ngsw-config.json",
             "allowedCommonJsDependencies": [
               "tiny-inflate",
