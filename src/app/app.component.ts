@@ -1,5 +1,5 @@
 import { Component, Inject, ElementRef, HostListener } from '@angular/core';
-import { OktaAuthStateService, OKTA_AUTH } from '@okta/okta-angular';
+import { OKTA_AUTH } from '@okta/okta-angular';
 import { OktaAuth } from '@okta/okta-auth-js';
 
 @Component({
@@ -11,11 +11,15 @@ export class AppComponent {
   isMobile: boolean = false;
   isExpanded: boolean = false;
 
-
-  constructor(public authStateService: OktaAuthStateService, @Inject(OKTA_AUTH) private oktaAuth: OktaAuth, private eRef: ElementRef) { }
+  constructor(@Inject(OKTA_AUTH) private oktaAuth: OktaAuth, private eRef: ElementRef) { }
 
   async login() {
-    await this.oktaAuth.signInWithRedirect({ originalUri: '/' });
+    await this.oktaAuth.signInWithRedirect();
+  }
+
+  async checkAuth() {
+    const a = await this.oktaAuth.isAuthenticated();
+    console.log(a);
   }
 
   ngOnInit() {
