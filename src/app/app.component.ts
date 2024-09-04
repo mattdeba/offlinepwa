@@ -17,11 +17,6 @@ export class AppComponent {
     await this.oktaAuth.signInWithRedirect();
   }
 
-  async checkAuth() {
-    const a = await this.oktaAuth.isAuthenticated();
-    console.log(a);
-  }
-
   ngOnInit() {
     this.checkWindowSize();
   }
