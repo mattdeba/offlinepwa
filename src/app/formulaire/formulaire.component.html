@@ -1,25 +1,26 @@
 <div class="flex-container">
-    <h1>Choix du contrat</h1>
+    <h3 class="title">Choix du contrat</h3>
+
     <p *ngIf="nextChoices.length != 0">Les modalités d'organisation de la durée de travail sont:</p>
-
-    <mat-chip-listbox>
-            <div class="chip-container">
-                <mat-chip-option *ngFor="let choice of nextChoices" (click)="onChoiceClick(choice)"><span class="choice">{{choice}}</span></mat-chip-option>
-            </div>
-    </mat-chip-listbox>
-
-    <ion-button>Click me</ion-button>
-
     <ng-container *ngIf="nextChoices.length == 0 && choices.length!=0">
-        <p>Les modalités du contrat selectionnées sont les suivants:</p>
+        <p>Les modalités du contrat selectionnées sont les suivantes:</p>
         <ul>
             <li *ngFor="let choice of choices">{{choice}}</li>
         </ul>
     </ng-container>
+    <div class="chip-container">
+        <ion-chip class="custom-chip"
+                  [outline]="true"
+                  [ngClass]="{'custom-chip-selected': selectedChoice === choice}"
+                  *ngFor="let choice of nextChoices"
+                  (click)="onChoiceClick(choice)"><span class="choice">{{choice}}</span></ion-chip>
+    </div>
+
+
 
     <div class="button-container">
-        <button mat-raised-button color="primary" (click)="restart()"><i class="fa-solid fa-backward-fast"></i> Revenir au début</button>
-        <button mat-raised-button (click)="onNextClick()" *ngIf="nextChoices.length != 0">Suivant <i class="fa-solid fa-forward-step"></i></button>
-        <button mat-raised-button color="accent" (click)="generatePdf()" *ngIf="nextChoices.length == 0 && choices.length!=0"><i class="fa-solid fa-download"></i> Télécharger le contrat</button>
+        <ion-button [color]="'light'" (click)="restart()"> Recommencer</ion-button>
+        <ion-button [color]="'dark'" (click)="onNextClick()" *ngIf="nextChoices.length != 0">Suivant</ion-button>
+        <ion-button [color]="'dark'" (click)="generatePdf()" *ngIf="nextChoices.length == 0 && choices.length!=0">Télécharger</ion-button>
     </div>
 </div>
