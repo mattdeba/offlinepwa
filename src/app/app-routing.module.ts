@@ -5,7 +5,7 @@ import {OktaCallbackComponent} from "@okta/okta-angular";
 import {authGuard} from "./auth/auth.guard";
 
 const routes: Routes = [
-  { path: 'formulaire', component: FormulaireComponent, canActivate: [authGuard] },
+  { path: 'formulaire', component: FormulaireComponent },//temporary deactivate guard for development
   { path: 'login/callback', component: OktaCallbackComponent}
 ];
 

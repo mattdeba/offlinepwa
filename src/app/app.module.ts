@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { Model } from './model/repository.model';
 import OktaAuth from '@okta/okta-auth-js';
 import { OktaAuthModule } from '@okta/okta-angular';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 const oktaAuth = new OktaAuth({
   issuer: 'https://cuma.okta.com/oauth2/aus38e911jvrUbFhn4x7',
@@ -26,7 +27,7 @@ const oktaAuth = new OktaAuth({
     AppRoutingModule,
     OktaAuthModule.forRoot({ oktaAuth }),
   ],
-  providers: [Model],
+  providers: [Model, provideAnimationsAsync()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
