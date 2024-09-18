@@ -1,50 +1,22 @@
-<div class='navbar' >
-  <div class="left-side">
-    <li class='nav-item' *ngIf="isMobile">
-      <button (click)="toggleExpand()"><i class="fa-solid fa-bars"></i></button>
-    </li>
-    <li class="nav-item" *ngIf="!isMobile">
-      <a class="nav-link"
-         routerLink="/">4T
-      </a>
-    </li>
-    <li class="nav-item" *ngIf="!isMobile">
-      <a class="nav-link"
-         routerLink="/formulaire">Formulaire
-      </a>
-    </li>
-  </div>
-  <div class="right-side" *ngIf="!isMobile">
-    <li class="nav-item">
-      <a (click)="login()" class="nav-link">Se connecter
-      </a>
-    </li>
-  </div>
+<ion-menu contentId="main-content">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>4T</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">Formulaire</ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+    <ion-header>
+        <ion-toolbar>
+            <ion-buttons slot="start">
+                <ion-menu-button></ion-menu-button>
+            </ion-buttons>
+            <ion-title>4T</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <router-outlet></router-outlet>
+    </ion-content>
 </div>
 
-
-<div class='sidenav' *ngIf="isMobile">
-  <div class="left-side">
-    <li class="nav-item" *ngIf="isExpanded">
-      <a class="nav-link"
-         routerLink="/"
-         (click)="closeSidenav()">4T
-      </a>
-    </li>
-    <li class="nav-item" *ngIf="isExpanded">
-      <a class="nav-link"
-         routerLink="/formulaire"
-         (click)="closeSidenav()">Formulaire
-      </a>
-    </li>
-  </div>
-  <div class="right-side" *ngIf="isExpanded">
-    <li class="nav-item" >
-      <a class="nav-link"
-         routerLink="/login"
-         (click)="closeSidenav(); login()">Se connecter
-      </a>
-    </li>
-  </div>
-</div>
-<router-outlet></router-outlet>
