@@ -1,37 +1,5 @@
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 80vw;
-    height: 70vh;
-}
-
-.button-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-
-.chip-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    flex-grow: 1;
-}
-
-mat-chip-option {
-}
-
-button {
-    margin: 0 10px 0 10px;
-}
-
 .custom-chip {
+  margin-bottom: 1rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -43,13 +11,7 @@ button {
     border: 1px solid #000;
 }
 
-@media (min-width: 860px) {
-    .flex-container {
-        width: 50%;
-        margin: 0 auto;
-    }
-}
-
-.title {
-    margin-top: 30px;
+.right-align {
+    display: flex;
+    justify-content: right;
 }
