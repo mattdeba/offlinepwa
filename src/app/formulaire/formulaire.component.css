@@ -5,3 +5,7 @@
 ion-checkbox {
   --border-radius: 50%;
 }
+
+#content-list {
+  padding: 0;
+}
