@@ -1,8 +1,8 @@
 {
-  "name": "Tfour",
-  "short_name": "Tfour",
-  "theme_color": "#FFFFFF",
-  "background_color": "#FFFFFF",
+  "name": "4T",
+  "short_name": "4T",
+  "theme_color": "#000000",
+  "background_color": "#000000",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
