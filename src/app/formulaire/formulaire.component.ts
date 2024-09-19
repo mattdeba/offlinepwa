@@ -28,6 +28,7 @@ export class FormulaireComponent {
 
   onNextClick() {
     this.choices.push(this.selectedChoice);
+    this.selectedChoice = "";
     this.nextChoices = this.model.getNextChoices(this.choices);
   }
 
@@ -55,6 +56,7 @@ export class FormulaireComponent {
 
   restart() {
     this.choices = [];
+    this.selectedChoice = "";
     this.nextChoices = this.model.getNextChoices(this.choices);
   }
 }

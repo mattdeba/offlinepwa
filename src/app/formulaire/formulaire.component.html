@@ -44,7 +44,7 @@
         </ion-col>
         <ion-col size-xs="5" size-sm="5" size-lg="2">
             <div class="right-align">
-                <ion-button [color]="'dark'" (click)="onNextClick()" *ngIf="nextChoices.length != 0">Suivant</ion-button>
+                <ion-button [color]="'dark'" (click)="onNextClick()" *ngIf="nextChoices.length != 0 && selectedChoice!=''">Suivant</ion-button>
                 <ion-button [color]="'dark'" (click)="generatePdf()" *ngIf="nextChoices.length == 0 && choices.length!=0">Télécharger</ion-button>
             </div>
         </ion-col>
