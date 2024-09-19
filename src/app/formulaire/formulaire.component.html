@@ -36,7 +36,7 @@
               *ngFor="let choice of nextChoices"
               (click)="onChoiceClick(choice)">
               <ion-checkbox [checked]="selectedChoice==choice" label-placement="end" alignment="start" justify="start">
-                {{choice}}
+                <span class="wrap-text">{{choice}}</span>
               </ion-checkbox>
             </ion-item>
           </ion-list>

@@ -23,3 +23,8 @@ h5 {
 ion-item {
   --padding-start: 0;
 }
+
+.wrap-text {
+  white-space: normal;
+  word-wrap: break-word;
+}
