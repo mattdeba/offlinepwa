@@ -10,6 +10,7 @@ import OktaAuth from '@okta/okta-auth-js';
 import { OktaAuthModule } from '@okta/okta-angular';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { IonicModule } from '@ionic/angular';
+import {HomeComponent} from "./home/home.component";
 
 const oktaAuth = new OktaAuth({
   issuer: 'https://cuma.okta.com/oauth2/aus38e911jvrUbFhn4x7',
@@ -21,6 +22,7 @@ const oktaAuth = new OktaAuth({
   declarations: [
     AppComponent,
     FormulaireComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

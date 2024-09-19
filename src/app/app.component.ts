@@ -11,11 +11,7 @@ import {Router} from "@angular/router";
 })
 export class AppComponent {
 
-  constructor(@Inject(OKTA_AUTH) private oktaAuth: OktaAuth, private menu: MenuController, private router: Router) { }
-
-  async login() {
-    await this.oktaAuth.signInWithRedirect();
-  }
+  constructor(private menu: MenuController, private router: Router) { }
 
   ngOnInit() {}
 

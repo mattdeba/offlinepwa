@@ -1,3 +1,12 @@
-<p>
-  home works!
-</p>
+<ion-grid class="grid">
+    <ion-row>
+        <ion-col size-xs="1" size-sm="1" size-lg="4"></ion-col>
+        <ion-col size-xs="10" size-sm="10" size-lg="4" id="title">
+          <h5 class="title">Accueil</h5>
+          <ion-button [color]="'light'" (click)="login()" *ngIf="!isAuthenticated">
+            Se connecter
+          </ion-button>
+        </ion-col>
+        <ion-col size-xs="1" size-sm="1" size-lg="4"></ion-col>
+    </ion-row>
+</ion-grid>
