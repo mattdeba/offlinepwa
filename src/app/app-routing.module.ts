@@ -7,7 +7,7 @@ import {HomeComponent} from "./home/home.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'formulaire', component: FormulaireComponent, canActivate: [authGuard] },
+  { path: 'formulaire', component: FormulaireComponent},//, canActivate: [authGuard] },
   { path: 'login/callback', component: OktaCallbackComponent}
 ];
 
