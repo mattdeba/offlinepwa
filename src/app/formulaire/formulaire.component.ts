@@ -23,7 +23,11 @@ export class FormulaireComponent {
   }
 
   onChoiceClick(choice: any) {
-    this.selectedChoice = choice;
+    if (this.selectedChoice === choice) {
+      this.selectedChoice = "";
+    } else {
+      this.selectedChoice = choice;
+    }
   }
 
   onNextClick() {
