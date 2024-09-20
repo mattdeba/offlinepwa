@@ -1,0 +1,377 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "libelle": "Est-ce un emploi à temps plein, à temps partiel ou alternant des périodes travaillées à temps plein et des périodes totalement non travaillées (intermittent) ?"
+    },
+    {
+      "id": 2,
+      "libelle": "Le besoin présente-il un caractère temporaire ?"
+    },
+    {
+      "id": 3,
+      "libelle": "L’emploi présente-t-il une alternance de périodes de haute activité et de périodes basses ?"
+    },
+    {
+      "id": 4,
+      "libelle": "Les modalités de temps de travail possibles sont :"
+    },
+    {
+      "id": 5,
+      "libelle": "Les modalités de temps de travail possibles sont :"
+    },
+    {
+      "id": 6,
+      "libelle": "L’emploi présente-t-il une alternance de périodes de haute activité et de périodes basses ?"
+    },
+    {
+      "id": 7,
+      "libelle": "cet emploi relève t il de la catégorie « cadre » ?"
+    },
+    {
+      "id": 8,
+      "libelle": "cet emploi implique-t-il que le salarié·e gère son emploi du temps ?"
+    },
+    {
+      "id": 9,
+      "libelle": "Les modalités de temps de travail possibles sont :"
+    },
+    {
+      "id": 10,
+      "libelle": "Les modalités de temps de travail possibles sont :"
+    },
+    {
+      "id": 11,
+      "libelle": "Suivent-t-ils l’horaire collectif ?"
+    },
+    {
+      "id": 12,
+      "libelle": "Les modalités de temps de travail possibles sont :"
+    },
+    {
+      "id": 13,
+      "libelle": "Les modalités de temps de travail possibles sont :"
+    },
+    {
+      "id": 14,
+      "libelle": "cet emploi relève t il de la catégorie « cadre » ?"
+    },
+    {
+      "id": 15,
+      "libelle": "Les modalités de temps de travail possibles sont :"
+    },
+    {
+      "id": 16,
+      "libelle": "Les modalités de temps de travail possibles sont :"
+    },
+    {
+      "id": 17,
+      "libelle": "Le besoin présente-il un caractère temporaire ?"
+    },
+    {
+      "id": 18,
+      "libelle": "L’emploi présente-t-il une alternance de périodes de haute activité et de périodes basses ?"
+    },
+    {
+      "id": 19,
+      "libelle": "Les modalités de temps de travail possibles sont :"
+    },
+    {
+      "id": 20,
+      "libelle": "Les modalités de temps de travail possibles sont :"
+    },
+    {
+      "id": 21,
+      "libelle": "L’emploi présente-t-il une alternance de périodes de haute activité et de périodes basses ?"
+    },
+    {
+      "id": 22,
+      "libelle": "Les modalités de temps de travail possibles sont :"
+    },
+    {
+      "id": 23,
+      "libelle": "Les modalités de temps de travail possibles sont :"
+    },
+    {
+      "id": 24,
+      "libelle": "Les modalités de temps de travail possibles sont :"
+    }
+  ],
+  "answers": [
+    {
+      "libelle": "Temps plein",
+      "questionId": 1,
+      "nextQuestionId": 2
+    },
+    {
+      "libelle": "Oui",
+      "questionId": 2,
+      "nextQuestionId": 3
+    },
+    {
+      "libelle": "Non",
+      "questionId": 3,
+      "nextQuestionId": 4
+    },
+    {
+      "libelle": "35H JRTT",
+      "questionId": 4,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "35 H HEBDO",
+      "questionId": 4,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "39 H HEBDO",
+      "questionId": 4,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "Oui",
+      "questionId": 3,
+      "nextQuestionId": 5
+    },
+    {
+      "libelle": "35H ANNUALISÉES",
+      "questionId": 5,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "35 H JRTT",
+      "questionId": 5,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "FORFAIT ANNUEL HEURES",
+      "questionId": 5,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "Non",
+      "questionId": 2,
+      "nextQuestionId": 6
+    },
+    {
+      "libelle": "Oui",
+      "questionId": 6,
+      "nextQuestionId": 7
+    },
+    {
+      "libelle": "Non",
+      "questionId": 7,
+      "nextQuestionId": 8
+    },
+    {
+      "libelle": "Non",
+      "questionId": 8,
+      "nextQuestionId": 9
+    },
+    {
+      "libelle": "35H ANNUALISÉES",
+      "questionId": 9,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "35 H JRTT",
+      "questionId": 9,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "Oui",
+      "questionId": 8,
+      "nextQuestionId": 10
+    },
+    {
+      "libelle": "35H ANNUALISÉES",
+      "questionId": 10,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "35 H JRTT",
+      "questionId": 10,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "FORFAIT ANNUEL HEURES",
+      "questionId": 10,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "Oui",
+      "questionId": 7,
+      "nextQuestionId": 11
+    },
+    {
+      "libelle": "Non",
+      "questionId": 11,
+      "nextQuestionId": 12
+    },
+    {
+      "libelle": "35H ANNUALISÉES",
+      "questionId": 12,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "35 H JRTT",
+      "questionId": 12,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "FORFAIT ANNUEL HEURES",
+      "questionId": 12,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "FORFAIT ANNUEL JOURS",
+      "questionId": 12,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "Oui",
+      "questionId": 11,
+      "nextQuestionId": 13
+    },
+    {
+      "libelle": "35H ANNUALISEES",
+      "questionId": 13,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "35 H JRTT",
+      "questionId": 13,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "FORFAIT ANNUEL HEURES",
+      "questionId": 13,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "Non",
+      "questionId": 6,
+      "nextQuestionId": 14
+    },
+    {
+      "libelle": "Non",
+      "questionId": 14,
+      "nextQuestionId": 15
+    },
+    {
+      "libelle": "35 H JRTT",
+      "questionId": 15,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "35 H HEBDO",
+      "questionId": 15,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "39 H HEBDO",
+      "questionId": 15,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "Oui",
+      "questionId": 14,
+      "nextQuestionId": 16
+    },
+    {
+      "libelle": "35 H JRTT",
+      "questionId": 16,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "35 H HEBDO",
+      "questionId": 16,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "39 H HEBDO",
+      "questionId": 16,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "FORFAIT ANNUEL JOURS",
+      "questionId": 16,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "Temps Partiel",
+      "questionId": 1,
+      "nextQuestionId": 17
+    },
+    {
+      "libelle": "Oui",
+      "questionId": 17,
+      "nextQuestionId": 18
+    },
+    {
+      "libelle": "Non",
+      "questionId": 18,
+      "nextQuestionId": 19
+    },
+    {
+      "libelle": "TEMPS PARTIEL HEBDO-MENSUEL",
+      "questionId": 19,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "Oui",
+      "questionId": 18,
+      "nextQuestionId": 20
+    },
+    {
+      "libelle": "TEMPS PARTIEL VARIABLE",
+      "questionId": 20,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "TEMPS PARTIEL ANNUALISE",
+      "questionId": 20,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "Non",
+      "questionId": 17,
+      "nextQuestionId": 21
+    },
+    {
+      "libelle": "Non",
+      "questionId": 21,
+      "nextQuestionId": 22
+    },
+    {
+      "libelle": "TEMPS PARTIEL HEBDO-MENSUEL",
+      "questionId": 22,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "Oui",
+      "questionId": 21,
+      "nextQuestionId": 23
+    },
+    {
+      "libelle": "TEMPS PARTIEL VARIABLE",
+      "questionId": 23,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "TEMPS PARTIEL ANNUALISE",
+      "questionId": 23,
+      "nextQuestionId": null
+    },
+    {
+      "libelle": "Intermittent",
+      "questionId": 1,
+      "nextQuestionId": 24
+    },
+    {
+      "libelle": "Intermittent",
+      "questionId": 24,
+      "nextQuestionId": null
+    }
+  ]
+}
