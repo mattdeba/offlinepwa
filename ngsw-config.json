@@ -11,7 +11,10 @@
           "/index.html",
           "/*.css",
           "/*.js",
-          "/assets/**"
+          "/assets/**",
+          "/node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2",
+          "/node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff",
+          "/node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf"
         ]
       }
     }
