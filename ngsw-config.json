@@ -4,7 +4,6 @@
     {
       "name": "app",
       "installMode": "prefetch",
-      "updateMode": "prefetch",
       "resources": {
         "files": [
           "/favicon.ico",
@@ -12,9 +11,19 @@
           "/*.css",
           "/*.js",
           "/assets/**",
+          "/manifest.webmanifest",
           "/node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2",
           "/node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff",
           "/node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf"
+        ]
+      }
+    },
+    {
+      "name": "manifest",
+      "installMode": "lazy",
+      "resources": {
+        "files": [
+          "/manifest.webmanifest"
         ]
       }
     }
