@@ -1,17 +1,30 @@
-.custom-chip {
-  margin-bottom: 1rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.custom-chip-selected {
-    font-weight: 500;
-    background-color: #E0E0E0;
-    border: 1px solid #000;
-}
-
 .right-align {
     display: flex;
     justify-content: right;
+}
+ion-checkbox {
+  --border-radius: 50%;
+}
+
+#content-list {
+  padding: 0;
+}
+
+h5 {
+  margin: 0;
+}
+
+#title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ion-item {
+  --padding-start: 0;
+}
+
+.wrap-text {
+  white-space: normal;
+  word-wrap: break-word;
 }

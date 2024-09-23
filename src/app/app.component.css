@@ -1,3 +1,13 @@
-#menu-button {
-    color: black;
+#button-menu {
+  color: black;
+}
+
+.nav-link {
+  cursor: pointer;
+}
+
+.footer-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

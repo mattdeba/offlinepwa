@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Model } from '../model/repository.model';
 import { generate } from '@pdfme/generator';
 import template from '../../assets/template_contrat.json';
+import {Answer, Question} from "../model/data.model";
 
 @Component({
   selector: 'app-formulaire',
@@ -9,52 +10,66 @@ import template from '../../assets/template_contrat.json';
   styleUrls: ['./formulaire.component.css']
 })
 export class FormulaireComponent {
-  selectedChoice: string = "";
-  choices: string[] = [];
-  nextChoices: string[] = this.model.getNextChoices([]);
+  selectedAnswers: (Answer|null)[] = [];
+  selectedAnswer: Answer | null = null;
+  question: Question;
+  answers: Answer[];
+  finalAnswer = false;
+  lastAnswer: any;
 
   constructor(private model: Model) {
-  }
-  getChoiceSet() {
-    console.log(this.model.getChoiceSet(1))
-  }
-  getNextChoices() {
-    console.log(this.model.getNextChoices( this.choices))
+    const { question, answers} = this.model.getNextQuestionAnswer(1);
+    this.question = question;
+    this.answers = answers;
   }
 
-  onChoiceClick(choice: any) {
-    this.selectedChoice = choice;
+  onChoiceClick(answer: any) {
+    if (this.selectedAnswer === answer.libelle) {
+      this.selectedAnswer = null;
+    } else {
+      this.selectedAnswer = answer;
+    }
   }
 
   onNextClick() {
-    this.choices.push(this.selectedChoice);
-    this.nextChoices = this.model.getNextChoices(this.choices);
+    this.selectedAnswers.push(this.selectedAnswer);
+    if (this.selectedAnswer?.nextQuestionId) {
+      const {
+        question, answers
+      } = this.model.getNextQuestionAnswer(this.selectedAnswer.nextQuestionId);
+      this.question = question;
+      this.answers = answers;
+    }
+    else {
+      this.finalAnswer = true;
+      this.lastAnswer = this.selectedAnswer;
+    }
+
+    this.selectedAnswer = null;
   }
 
   async generatePdf() {
-    const choicesLength = this.choices.length;
     const today = new Date().toLocaleDateString();
 
   const inputs = [{
     pdfDate: today,
-    choice1: choicesLength >= 1 ? this.choices[0] : null,
-    choice2: choicesLength >= 2 ? this.choices[1] : null,
-    choice3: choicesLength >= 3 ? this.choices[2] : null,
-    choice4: choicesLength >= 4 ? this.choices[3] : null,
-    choice5: choicesLength >= 5 ? this.choices[4] : null,
-    choice6: choicesLength >= 6 ? this.choices[5] : null,
-    choice7: choicesLength >= 7 ? this.choices[6] : null,
+    choice1: this.lastAnswer.libelle,
   }]
 
     generate({ template, inputs }).then((pdf) => {
       const blob = new Blob([pdf.buffer], { type: 'application/pdf' });
       window.open(URL.createObjectURL(blob));
-
     });
   }
 
   restart() {
-    this.choices = [];
-    this.nextChoices = this.model.getNextChoices(this.choices);
+    this.finalAnswer = false;
+    this.lastAnswer = null;
+    this.selectedAnswers = [];
+    this.selectedAnswer = null;
+    const {
+      question, answers } =this.model.getNextQuestionAnswer(1);
+    this.question = question;
+    this.answers = answers;
   }
 }

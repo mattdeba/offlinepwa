@@ -1,6 +1,8 @@
-import { Component, Inject, ElementRef, HostListener } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { OKTA_AUTH } from '@okta/okta-angular';
 import { OktaAuth } from '@okta/okta-auth-js';
+import { MenuController } from '@ionic/angular';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -8,57 +10,13 @@ import { OktaAuth } from '@okta/okta-auth-js';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  isMobile: boolean = false;
-  isExpanded: boolean = false;
 
-  constructor(@Inject(OKTA_AUTH) private oktaAuth: OktaAuth, private eRef: ElementRef) { }
+  constructor(private menu: MenuController, private router: Router) { }
 
-  async login() {
-    await this.oktaAuth.signInWithRedirect();
-  }
+  ngOnInit() {}
 
-  ngOnInit() {
-    this.checkWindowSize();
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    this.checkWindowSize();
-  }
-
-  @HostListener('document:click', ['$event'])
-  clickout(event: any) {
-    if (!this.eRef.nativeElement.contains(event.target)) {
-      this.isExpanded = false;
-      let sidenav = document.querySelector('.sidenav');
-      if (sidenav) {
-        sidenav.classList.remove('isExpanded');
-      }
-    }
-  }
-
-  private checkWindowSize() {
-    this.isMobile = window.innerWidth < 768;
-  }
-
-  toggleExpand() {
-    this.isExpanded = !this.isExpanded;
-    let sidenav = document.querySelector('.sidenav');
-    if (sidenav === null) {
-      return;
-    }
-    if (this.isExpanded) {
-      sidenav.classList.add('isExpanded');
-    } else {
-      sidenav.classList.remove('isExpanded');
-    }
-  }
-
-  closeSidenav() {
-    this.isExpanded = false;
-    let sidenav = document.querySelector('.sidenav');
-    if (sidenav) {
-      sidenav.classList.remove('isExpanded');
-    }
+  closeMenu(navTab: string) {
+    this.menu.close();
+    this.router.navigateByUrl(navTab);
   }
 }
