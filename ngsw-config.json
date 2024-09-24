@@ -12,10 +12,18 @@
           "/*.css",
           "/*.js",
           "/assets/**",
-          "/manifest.webmanifest",
-          "/node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2",
-          "/node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff",
-          "/node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf"
+          "/manifest.webmanifest"
+        ]
+      }
+    },
+    {
+      "name": "fonts",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/assets/**",
+          "/*.(ttf|woff|woff2)"
         ]
       }
     }
