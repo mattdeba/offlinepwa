@@ -13,7 +13,7 @@
     <ion-row>
         <ion-col size-xs="1" size-sm="1" size-lg="4"></ion-col>
         <ion-col size-xs="10" size-sm="10" size-lg="4">
-            <p *ngIf="!finalAnswer">{{question.libelle}}</p>
+            <ion-text *ngIf="!finalAnswer">{{question.libelle}}</ion-text>
             <ng-container *ngIf="finalAnswer">
                 <p>Les modalités du contrat selectionnées sont les suivantes:</p>
                 <ion-list>
