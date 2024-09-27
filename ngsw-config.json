@@ -12,7 +12,17 @@
           "/*.css",
           "/*.js",
           "/assets/**",
-          "/manifest.webmanifest",
+          "/manifest.webmanifest"
+        ]
+      }
+    },
+    {
+      "name": "fonts",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/assets/**",
           "/*.(ttf|woff|woff2)"
         ]
       }
