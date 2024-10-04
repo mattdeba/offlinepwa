@@ -5,17 +5,18 @@ import { AppComponent } from './app.component';
 import { MaterialFeatures } from './material/material.module';
 import { FormulaireComponent } from './formulaire/formulaire.component';
 import { AppRoutingModule } from './app-routing.module';
-import { Model } from './model/repository.model';
 import OktaAuth from '@okta/okta-auth-js';
 import { OktaAuthModule } from '@okta/okta-angular';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { IonicModule } from '@ionic/angular';
 import {HomeComponent} from "./home/home.component";
+import {SimpleDataSource} from "./model/simple-datasource";
+import {HttpClientModule, provideHttpClient} from "@angular/common/http";
 
 const oktaAuth = new OktaAuth({
   issuer: 'https://cuma.okta.com/oauth2/aus38e911jvrUbFhn4x7',
   clientId: '0oam37b31i1MlMnzu4x7',
-  redirectUri: 'https://tfour.mycuma.fr/login/callback',
+  redirectUri: 'http://localhost:4200/login/callback',
 });
 
 @NgModule({
@@ -31,7 +32,7 @@ const oktaAuth = new OktaAuth({
     OktaAuthModule.forRoot({ oktaAuth }),
     IonicModule.forRoot({}),
   ],
-  providers: [Model, provideAnimationsAsync()],
+  providers: [provideAnimationsAsync(), SimpleDataSource, provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

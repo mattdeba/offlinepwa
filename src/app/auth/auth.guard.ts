@@ -8,7 +8,7 @@ export const authGuard = async () => {
   const oktaAuth: OktaAuth = inject(OKTA_AUTH);
 
   const authenticated = await oktaAuth.isAuthenticated();
-  console.log(oktaAuth.getUser());
+
   if (authenticated) {
     return true;
   }

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { Model } from '../model/repository.model';
 import { generate } from '@pdfme/generator';
 import template from '../../assets/template_contrat.json';
 import {Answer, Question} from "../model/data.model";
+import {SimpleDataSource} from "../model/simple-datasource";
 
 @Component({
   selector: 'app-formulaire',
@@ -12,15 +12,33 @@ import {Answer, Question} from "../model/data.model";
 export class FormulaireComponent {
   selectedAnswers: (Answer|null)[] = [];
   selectedAnswer: Answer | null = null;
-  question: Question;
+  question: Question | null = null;
   answers: Answer[];
   finalAnswer = false;
   lastAnswer: any;
 
-  constructor(private model: Model) {
-    const { question, answers} = this.model.getNextQuestionAnswer(1);
-    this.question = question;
-    this.answers = answers;
+  rawQuestions: Question[] = [];
+  rawAnswers: Answer[] = [];
+
+  constructor(private dataSource: SimpleDataSource) {}
+
+  ngOnInit() {
+    this.dataSource.getQuestionSet().subscribe((res) => {
+      this.rawQuestions = res.questions;
+      this.rawAnswers = res.answers;
+      const { question, answers} = this.getNextQuestionAnswer(1);
+      if (question) this.question = question;
+      this.answers = answers;
+    });
+  }
+
+  getNextQuestionAnswer(id: number) {
+    const question = this.rawQuestions.find((q) => q.id == id);
+    const answers = this.rawAnswers.filter((a) => a.questionId == question?.id);
+    return {
+      question,
+      answers
+    }
   }
 
   onChoiceClick(answer: any) {
@@ -36,8 +54,8 @@ export class FormulaireComponent {
     if (this.selectedAnswer?.nextQuestionId) {
       const {
         question, answers
-      } = this.model.getNextQuestionAnswer(this.selectedAnswer.nextQuestionId);
-      this.question = question;
+      } = this.getNextQuestionAnswer(this.selectedAnswer.nextQuestionId);
+      if (question) this.question = question;
       this.answers = answers;
     }
     else {
@@ -68,8 +86,8 @@ export class FormulaireComponent {
     this.selectedAnswers = [];
     this.selectedAnswer = null;
     const {
-      question, answers } =this.model.getNextQuestionAnswer(1);
-    this.question = question;
+      question, answers } = this.getNextQuestionAnswer(1);
+    if (question) this.question = question;
     this.answers = answers;
   }
 }
