@@ -9,9 +9,9 @@ import OktaAuth from '@okta/okta-auth-js';
 import { OktaAuthModule } from '@okta/okta-angular';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { IonicModule } from '@ionic/angular';
-import {HomeComponent} from "./home/home.component";
-import {SimpleDataSource} from "./model/simple-datasource";
-import {HttpClientModule, provideHttpClient} from "@angular/common/http";
+import { HomeComponent } from './home/home.component';
+import { SimpleDataSource } from './model/simple-datasource';
+import { provideHttpClient } from '@angular/common/http';
 
 const oktaAuth = new OktaAuth({
   issuer: 'https://cuma.okta.com/oauth2/aus38e911jvrUbFhn4x7',
@@ -20,11 +20,7 @@ const oktaAuth = new OktaAuth({
 });
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    FormulaireComponent,
-    HomeComponent,
-  ],
+  declarations: [AppComponent, FormulaireComponent, HomeComponent],
   imports: [
     BrowserModule,
     MaterialFeatures,
@@ -33,6 +29,6 @@ const oktaAuth = new OktaAuth({
     IonicModule.forRoot({}),
   ],
   providers: [provideAnimationsAsync(), SimpleDataSource, provideHttpClient()],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
