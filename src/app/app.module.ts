@@ -12,11 +12,12 @@ import { IonicModule } from '@ionic/angular';
 import { HomeComponent } from './home/home.component';
 import { SimpleDataSource } from './model/simple-datasource';
 import { provideHttpClient } from '@angular/common/http';
+import { environment } from '../environments/environment';
 
 const oktaAuth = new OktaAuth({
   issuer: 'https://cuma.okta.com/oauth2/aus38e911jvrUbFhn4x7',
   clientId: '0oam37b31i1MlMnzu4x7',
-  redirectUri:
+  redirectUri: environment.callbackUrl,
 });
 
 @NgModule({
