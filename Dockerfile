@@ -3,6 +3,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN npm run build -- --configuration=${NODE_ENV}
+ARG CONFIG_ENV=development
+RUN npm run build -- --configuration=${CONFIG_ENV}
 EXPOSE 8080
 CMD ["node", "server.js"]

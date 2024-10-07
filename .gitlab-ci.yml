@@ -7,7 +7,7 @@ build_preprod:
   image: docker
   script:
     - docker login -u ${DOCKER_REGISTRY_USER_LOGIN} -p ${DOCKER_REGISTRY_USER_PASSWORD} docker-repository.mycuma.fr
-    - docker build -t docker-repository.mycuma.fr/fncuma-api/tfour:latest .
+    - docker build --build-arg CONFIG_ENV=preprod -t docker-repository.mycuma.fr/fncuma-api/tfour:latest .
     - docker push docker-repository.mycuma.fr/fncuma-api/tfour:latest
   when: manual
   allow_failure: true
