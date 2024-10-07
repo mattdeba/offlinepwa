@@ -3,11 +3,13 @@ import { Inject, Injectable } from '@angular/core';
 import { OKTA_AUTH } from '@okta/okta-angular';
 import OktaAuth from '@okta/okta-auth-js';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class SimpleDataSource {
   public questions: any[] = [];
   public answers: any[] = [];
+  baseUrl = environment.baseUrl;
 
   constructor(
     private http: HttpClient,
@@ -15,7 +17,7 @@ export class SimpleDataSource {
   ) {}
 
   getQuestionSet(): Observable<any> {
-    return this.http.get('http://localhost:3000/question-set', {
+    return this.http.get(`${this.baseUrl}/question-set`, {
       headers: new HttpHeaders({
         Authorization: `Bearer ${this._oktaAuth.getAccessToken()}`,
       }),
