@@ -12,3 +12,13 @@
   align-items: center;
   font-size: 0.8em;
 }
+
+.left-align {
+  text-align: left;
+}
+
+#button-logo {
+  color: black;
+  font-weight: 500;
+  padding-left: 1rem;
+}
