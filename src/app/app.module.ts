@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { SimpleDataSource } from './model/simple-datasource';
 import { provideHttpClient } from '@angular/common/http';
 import { environment } from '../environments/environment';
+import { LogoutComponent } from './logout/logout.component';
 
 const oktaAuth = new OktaAuth({
   issuer: 'https://cuma.okta.com/oauth2/aus38e911jvrUbFhn4x7',
@@ -21,7 +22,12 @@ const oktaAuth = new OktaAuth({
 });
 
 @NgModule({
-  declarations: [AppComponent, FormulaireComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    FormulaireComponent,
+    HomeComponent,
+    LogoutComponent,
+  ],
   imports: [
     BrowserModule,
     MaterialFeatures,

@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { RessourcesComponent } from './ressources/ressources.component';
 import { InfosComponent } from './infos/infos.component';
 import { AboutComponent } from './about/about.component';
+import { LogoutComponent } from './logout/logout.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'ressources', component: RessourcesComponent },
   { path: 'infos', component: InfosComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'logout', component: LogoutComponent },
   { path: 'login/callback', component: OktaCallbackComponent },
 ];
 
